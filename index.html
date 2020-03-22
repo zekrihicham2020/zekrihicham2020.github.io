@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackviz</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="select.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+</head>
+
+<body>
+
+    <section class="container-fluid text-center fullscreen" id="loading">
+        <div class="col-md-4 mx-auto mt-4">
+            <div class="view mb-4 mt-4">
+                <img src="files/gif.gif" width="100%" class="animated zoomIn img-fluid" alt="smaple image">
+            </div>
+        </div>
+        <h3 class="font-weight-boldpy-2 animated zoomIn">Rêvez-vous d'un voyage en temps ? Du château Comtal jusqu'au
+            temps des avions
+            avec Airbus</h3>
+        <p class="text-center mx-auto py-2 animated jackInTheBox">Voici ce que les chiffres disent à propos du pays
+            d'Axoa en 2018</p>
+        <button type="button" onclick="loadingDone()"
+            class="animated zoomIn delay-1s btn btn-deep-purple btn-rounded">Commençant notre
+            histoire</button>
+    </section>
+    <div class="devider row">
+        <div class="row col-md-12 col-sm-12" style="width: 100vw;">
+            <div class="col-md-6 col-sm-6" style="width:100%;">
+                <h1 class="text-white mb-4 wow zoomIn" data-wow-duration="1s" style="font-size: 600%;">42856</h1>
+                <p></p>
+                <h6 class="mt-4 text-white wow zoomIn" data-wow-duration="1s">Touristes étrangere ont préféré
+                    l'Occitanie pour passer leur séjours en <b>2018</b></h6>
+            </div>
+            <div class="col-md-6 col-sm-6" style="width:100%;">
+                <div class="progress mb-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="1s">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">90.3%</div>
+                </div>
+                <h6 class="mt-4 text-white wow zoomIn" data-wow-duration="1s" data-wow-delay="1s">5099/42856 De la
+                    Royaume-Uni de Grande-Bretagne et d'Irland du Nord</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-4" style="width: 100vw;">
+        <section class="text-center pt-4">
+            <div class="row col-md-12">
+                <div id="sticky1" class="col-md-7 col-sm-7 fullheight">
+                    <div id="story1"></div>
+                </div>
+                <div class="col-md-5 col-sm-5 fullscale">
+                    <div class="col-md-12 col-sm-12 fullheight">
+                        <div id="intern" class="step2"></div>
+                        <div id="bars" class="step2"></div>
+                    </div>
+                    <!--<div class="col-md-12 col-sm-12 fullheight">
+                        <div id="pie2" class="step"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 fullheight">
+                        <div id="pie1" class="step"></div>
+                    </div>-->
+                   <!-- <div class="col-md-12 col-sm-12 fullheight">
+                                               <div id="bars" class="step"></div>
+
+                    </div>-->
+                </div>
+            </div>
+        </section>
+        <div class="devider">
+            <div class="row col-md-12 col-sm-12" style="width: 100vw;">
+                <div class="col-md-6 col-sm-6" style="width:100%;">
+                    <h1 class="text-white mb-4 wow zoomIn" data-wow-duration="1s" style="font-size: 600%;">Lozère</h1>
+                    <p></p>
+                    <h5 class="mt-4 text-white wow zoomIn" data-wow-duration="1s">La destination pour ceux qui cherchaient le calme </h5>
+                </div>
+                <div class="col-md-6 col-sm-6" style="width:100%;">
+                    <h1 class="text-white mb-4 wow zoomIn" data-wow-duration="1s" style="font-size: 600%;">Hérault</h1>
+                    <p></p>
+                    <h6 class="mt-4 text-white wow zoomIn" data-wow-duration="1s">Pour plus de dynamisme, le département le plus préféré par les touristes en 2018</h6>
+                </div>
+            </div>
+        </div>
+        <section class="text-center">
+            <div class="row col-md-12">
+                <div id="sticky2" class="col-md-7 col-sm-7 fullheight">
+                    <div class="holder">
+                        <div id="form-wrapper">
+                            <form>
+                                <h3 id="form-title">Selectionnez un mois</h3>
+                                <div id="debt-amount-slider">
+                                    <input type="radio" name="debt-amount" id="1" value="1" required>
+                                    <label for="1" data-debt-amount="1"></label>
+                                    <input type="radio" name="debt-amount" id="2" value="2" required>
+                                    <label for="2" data-debt-amount="2"></label>
+                                    <input type="radio" name="debt-amount" id="3" value="3" required>
+                                    <label for="3" data-debt-amount="3"></label>
+                                    <input type="radio" name="debt-amount" id="4" value="4" required>
+                                    <label for="4" data-debt-amount="4"></label>
+                                    <input type="radio" name="debt-amount" id="5" value="5" required>
+                                    <label for="5" data-debt-amount="5"></label>
+                                    <input type="radio" name="debt-amount" id="6" value="6" required>
+                                    <label for="6" data-debt-amount="6"></label>
+                                    <input type="radio" name="debt-amount" id="7" value="7" required>
+                                    <label for="7" data-debt-amount="7"></label>
+                                    <input type="radio" name="debt-amount" id="8" value="8" required>
+                                    <label for="8" data-debt-amount="8"></label>
+                                    <input type="radio" name="debt-amount" id="9" value="9" required>
+                                    <label for="9" data-debt-amount="9"></label>
+                                    <input type="radio" name="debt-amount" id="10" value="10" required>
+                                    <label for="10" data-debt-amount="10"></label>
+                                    <input type="radio" name="debt-amount" id="11" value="11" required>
+                                    <label for="11" data-debt-amount="11"></label>
+                                    <input type="radio" name="debt-amount" id="12" value="12" required>
+                                    <label for="12" data-debt-amount="12"></label>
+                                    <div id="debt-amount-pos"></div>
+                                </div>
+                            </form>
+                            <button type="submit" onclick="visualiser();">Visualiser</button>
+                        </div>
+                        <div id="story2"></div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-5 fullscale">
+                   <!-- <div class="col-md-12 col-sm-12 bg-dark fullheight">
+                        <p class="text-white info1 wow fadeInUp">Parce qu'on se connait mieux si on se voit dans les
+                            yeux des autres.
+                            <br>Occitane a organisé <span class="text-primary"><b>202</b></span> évènements en 2018.
+                            <br>Hérault a eu la part du lion avec 48 évènements dont la majorité sous le soleil d'été
+                            sur les plages de la Méditerranée</p>
+                    </div>-->
+                    <!--<div class="col-md-12 col-sm-12 fullheight" style="background-image: url('./files/event.jpg');">
+                    </div>-->
+                    <div class="col-md-12 col-sm-12 fullheight">
+                       <div style="background-color: black" class="">
+                           <p class="info wow fadeInUp" style="color: white">Parce qu'on se connait mieux si on se voit dans les
+                            yeux des autres.
+                           <br>
+                               Occitane a organisé <b style="font-size: 150%">202</b>  évènements en <b style="font-size: 150%">2018</b>.
+                            <br><b style="font-size: 150%"><i>Hérault</i></b> a eu la part du lion avec <b style="font-size: 150%">48</b> évènements dont la majorité sous le soleil d'été
+                               sur les plages de <br><b style="font-size: 150%"><i>la Méditerranée</i></b></p></div>
+                        <div id="ordered" class="step"></div>
+
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 fullscale">
+                   <!-- <div id="ordered" class="step"></div>-->
+                </div>
+            </div>
+        </section>
+        <div class="devider">
+            
+        </div>
+        <section class="text-center pt-4">
+            <div class="row col-md-12">
+                <div id="sticky3" class="col-md-7 col-sm-7 fullheight">
+                    <h4>Séléctionner un mois</h4>
+                    <select id="select">
+                        <option value="1">JAN</option>
+                        <option value="2">FEV</option>
+                        <option value="3">MAR</option>
+                        <option value="4">AVR</option>
+                        <option value="5">MAI</option>
+                        <option value="6">JUN</option>
+                        <option value="7">JUI</option>
+                        <option value="8">AOU</option>
+                        <option value="9">SPT</option>
+                        <option value="10">OCT</option>
+                        <option value="11">NOV</option>
+                        <option value="12">DEC</option>
+                    </select>
+                    <div id="story3"></div>
+                </div>
+                <div class="col-md-5 col-sm-5 fullscale">
+                    <p class="wow fadeInUp info2">
+                        La majorité de nos visiteurs ont préféré de passer leurs nuitées sous un ciel plein d'étoiles.
+                        La région d'Occitanie a pu réalisé le rêve de <span class="text-primary">460651</span> touristes
+                        qui admirent le camping en plein nature.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="devider" style="margin-left: 0;">
+            <p class="text-white wow fadeInUp info2 text-center">L'occitanie vous ouvre ses bras car "Celui qui reste
+                autour de sa maison, s'il ne gagne rien, ne perd rien"
+                On l'écrit aussi en occitan "Cu resto altour de soun couder, se ré nou gagno, ré nou per"</p>
+        </div>
+        
+    </div>
+    <!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color: #6351ce;">
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+          <!-- Grid column -->
+          <div class="col-md-12 col-lg-12 text-center text-md-left ml-4 mb-4 mb-md-0">
+            <h6 class="mb-0">Jeu de données fourni par l'association toulouse-Dataviz dans le cadre du Hackaviz 2020 </h6>
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">ESI-SBA</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>Une equipe des étudiants de l'école supérieure en informatique, Sidi Bel Abbes, Algerie</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">traitement des données</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Python
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Visualisation graphique et traitements</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Highcharts.js
+          </p>
+          <p>
+            Highmaps.js
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Design</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Material Design Bootstrap</p>
+          <p>
+            animate.css - wow.js</p>
+          <p>
+            sticky-sidebar.js</p>
+  
+        </div>
+        <!-- Grid column -->
+
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Réalisation:
+      <a href="https://esi-sba.dz/"> ESI-SBA</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+    <!-- Highcharts and Highmaps JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+    <!-- Scroll story teling -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js"></script>
+    <!-- Charts -->
+    <script src="charts/density_map.js"></script>
+    <script src="charts/density_map_intern.js"></script>
+    <script src="charts/packed_bubble.js"></script>
+    <script src="charts/pie1.js"></script>
+    <script src="charts/pie2.js"></script>
+    <script src="charts/bars.js"></script>
+    <script src="charts/ordered_bars_line.js"></script>
+    <script src="charts/map_pie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="script.js"></script>
+    <script>
+        function visualiser() {
+            var radioValue = $("input[name='debt-amount']:checked").val();
+            bubbleUpdate(radioValue);
+        }
+
+        document.getElementById('select').onchange = function () {
+            var e = document.getElementById("select");
+            var moi = e.options[e.selectedIndex].value;
+            var i = 0;
+            for (let i = 0; i < 13; i++) {
+                data[i].value = values[parseInt(moi) - 1][i];
+
+            }
+            console.log(data);
+            load();
+        }
+    </script>
+</body>
+
+</html>
